@@ -22,43 +22,44 @@
             </ItemsControl.ItemsPanel>
             <ItemsControl.ItemTemplate>
                 <DataTemplate>
-                    <Image>
+                    <Button Click="Button_Click">
+                        <Image>
                         <Image.Style>
                             <Style TargetType="Image">
                                 <Setter Property="Source" 
                                         Value="grafika/pusta.png"/>
                                 <Style.Triggers>
-                                    <DataTrigger Binding="{Binding}"
+                                    <DataTrigger Binding="{Binding Wartosc}"
                                                  Value="1">
                                         <Setter Property="Source"
                                                 Value="grafika/kosc1.png"/>
                                     </DataTrigger>
                                     
-                                    <DataTrigger Binding="{Binding}"
+                                    <DataTrigger Binding="{Binding Wartosc}"
                                                  Value="2">
                                         <Setter Property="Source"
                                                 Value="grafika/kosc2.png"/>
                                     </DataTrigger>
 
-                                    <DataTrigger Binding="{Binding}"
+                                    <DataTrigger Binding="{Binding Wartosc}"
                                                  Value="3">
                                         <Setter Property="Source"
                                                 Value="grafika/kosc3.png"/>
                                     </DataTrigger>
 
-                                    <DataTrigger Binding="{Binding}"
+                                    <DataTrigger Binding="{Binding Wartosc}"
                                                  Value="4">
                                         <Setter Property="Source"
                                                 Value="grafika/kosc4.png"/>
                                     </DataTrigger>
 
-                                    <DataTrigger Binding="{Binding}"
+                                    <DataTrigger Binding="{Binding Wartosc}"
                                                  Value="5">
                                         <Setter Property="Source"
                                                 Value="grafika/kosc5.png"/>
                                     </DataTrigger>
 
-                                    <DataTrigger Binding="{Binding}"
+                                    <DataTrigger Binding="{Binding Wartosc}"
                                                  Value="6">
                                         <Setter Property="Source"
                                                 Value="grafika/kosc6.png"/>
@@ -67,6 +68,7 @@
                             </Style>
                         </Image.Style>
                     </Image>
+                    </Button>
                 </DataTemplate>
             </ItemsControl.ItemTemplate>
         </ItemsControl>
