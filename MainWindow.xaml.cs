@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,9 +21,35 @@ namespace WpfAppKosci
     /// </summary>
     public partial class MainWindow : Window
     {
+        public ObservableCollection<int> rezultaty { get; set; }
         public MainWindow()
         {
             InitializeComponent();
+            rezultaty = new ObservableCollection<int>();
+            DataContext = this; // żeby działało bindowanie do XAML
+
+
+
+
+        }
+
+        private void rzuc_btn_Click(object sender, RoutedEventArgs e)
+        {
+            rezultaty.Clear();
+            Random random = new Random();
+            for(int i=0; i<10; i++)
+            {
+                rezultaty.Add(random.Next(1,7));
+            }
+        }
+
+        private void wyczysc_btn_Click(object sender, RoutedEventArgs e)
+        {
+            rezultaty.Clear();
+            for(int i=0; i<10; i++)
+            {
+                rezultaty.Add(0);
+            }
         }
     }
 }

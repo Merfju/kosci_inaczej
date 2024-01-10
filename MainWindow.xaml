@@ -6,7 +6,69 @@
         xmlns:local="clr-namespace:WpfAppKosci"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
+    <DockPanel>
+        <Button DockPanel.Dock="Bottom"
+                x:Name="rzuc_btn"
+                Click="rzuc_btn_Click">Rzuć</Button>
 
-    </Grid>
+        <Button x:Name="wyczysc_btn"
+                DockPanel.Dock="Bottom"
+                Click="wyczysc_btn_Click">Wyczyść</Button>
+        <ItemsControl ItemsSource="{Binding rezultaty}">
+            <ItemsControl.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <UniformGrid/>
+                </ItemsPanelTemplate>
+            </ItemsControl.ItemsPanel>
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                    <Image>
+                        <Image.Style>
+                            <Style TargetType="Image">
+                                <Setter Property="Source" 
+                                        Value="grafika/pusta.png"/>
+                                <Style.Triggers>
+                                    <DataTrigger Binding="{Binding}"
+                                                 Value="1">
+                                        <Setter Property="Source"
+                                                Value="grafika/kosc1.png"/>
+                                    </DataTrigger>
+                                    
+                                    <DataTrigger Binding="{Binding}"
+                                                 Value="2">
+                                        <Setter Property="Source"
+                                                Value="grafika/kosc2.png"/>
+                                    </DataTrigger>
+
+                                    <DataTrigger Binding="{Binding}"
+                                                 Value="3">
+                                        <Setter Property="Source"
+                                                Value="grafika/kosc3.png"/>
+                                    </DataTrigger>
+
+                                    <DataTrigger Binding="{Binding}"
+                                                 Value="4">
+                                        <Setter Property="Source"
+                                                Value="grafika/kosc4.png"/>
+                                    </DataTrigger>
+
+                                    <DataTrigger Binding="{Binding}"
+                                                 Value="5">
+                                        <Setter Property="Source"
+                                                Value="grafika/kosc5.png"/>
+                                    </DataTrigger>
+
+                                    <DataTrigger Binding="{Binding}"
+                                                 Value="6">
+                                        <Setter Property="Source"
+                                                Value="grafika/kosc6.png"/>
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Image.Style>
+                    </Image>
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+        </ItemsControl>
+    </DockPanel>
 </Window>

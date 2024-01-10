@@ -7,4 +7,38 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="grafika\kosc1.png" />
+    <None Remove="grafika\kosc2.png" />
+    <None Remove="grafika\kosc3.png" />
+    <None Remove="grafika\kosc4.png" />
+    <None Remove="grafika\kosc5.png" />
+    <None Remove="grafika\kosc6.png" />
+    <None Remove="grafika\pusta.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="grafika\kosc1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="grafika\kosc2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="grafika\kosc3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="grafika\kosc4.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="grafika\kosc5.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="grafika\kosc6.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="grafika\pusta.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+
 </Project>
